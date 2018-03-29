@@ -1,0 +1,47 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+//Large: ≥1200px
+@include media-breakpoint-down(lg) {
+	
+}
+
+//Medium: ≥992px
+@include media-breakpoint-down(md) {
+
+}
+
+//Small: ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+//Extra ≥576px
+@include media-breakpoint-down(xs) {
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+//Small: ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+//Medium: ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+//Large: ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+//Extra large: ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

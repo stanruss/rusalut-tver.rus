@@ -1,0 +1,435 @@
+@import "../libs/bootstrap/scss/my-variables"
+@import "../libs/bootstrap/scss/bootstrap"
+@import "_mixins/mixins"
+@import "../css/animate.css"
+@import "fonts"
+
+html, body
+	height: 100%
+	font-size: 16px
+	body
+		min-width: 320px
+		position: relative
+		font-family: $default-font
+		color: $main-color
+		box-sizing: border-box
+		overflow-x: hidden
+		input, textarea
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+				&:required:valid
+					border-color: green
+
+.clearfix
+	display: block
+	clear: both
+	content: ""
+.main-head
+	position: relative
+	overflow: hidden
+	min-height: 660px
+	background-image: url(../img/5-salut.jpg)
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+.header-box
+	h1
+		text-transform: none
+		position: relative
+		display: block
+		margin-bottom: 30px
+		&:after
+			position: absolute
+			content: ""
+			width: 80%
+			height: 4px
+			background-color: $warning
+			left: 50%
+			margin-left: -40%
+			bottom: -10px
+.navbar-text
+	position: absolute
+	right: 30px
+#hexagon
+	width: 100px
+	height: 55px
+	background: $red
+	position: relative
+	padding: 20px 
+	margin: 20px
+	display: block
+	top: 0
+	z-index: 3
+	h1
+		position: absolute
+		bottom: -3px
+		font-weight: bold
+		font-family: $extraBold-font
+		left: 20px
+		color: $white
+		+ts(1px,1px,3px,$dark)
+		span
+			margin-left: 30px
+			color: $white
+			font-size: 20px
+			letter-spacing: 5px
+	&:before
+		content: ""
+		position: absolute
+		top: -25px
+		left: 0
+		width: 0
+		height: 0
+		border-left: 50px solid transparent
+		border-right: 50px solid transparent
+		border-bottom: 25px solid $red
+	&:after
+		content: ""
+		position: absolute
+		bottom: -25px
+		left: 0
+		width: 0
+		height: 0
+		border-left: 50px solid transparent
+		border-right: 50px solid transparent
+		border-top: 25px solid $red	
+.navbar-dark .navbar-text
+	color: $white
+.header-box, .form-box
+	height: 509px
+	h4
+		line-height: 1.4
+.form-box
+	opacity: .9
+	h4
+		position: relative
+		margin-bottom: 30px
+		&:after
+			position: absolute
+			content: ""
+			height: 3px
+			width: 200px
+			left: 50%
+			bottom: -15px
+			margin-left: -100px
+			background-color: $warning
+.form-info
+	border-radius: 5px
+.layer
+	position: absolute
+	width: 100%
+	height: 100%
+	background-color: $dark
+	opacity: .87
+	top: 0
+	bottom: 0
+	left: 0
+	right: 0
+	overflow: hidden
+	z-index: 1
+.cb-slideshow
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0px
+	right: 0
+	left: 0px
+	z-index: 0		
+	li
+		list-style: none
+		span
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0px
+			left: 0px
+			color: transparent
+			background-size: cover
+			background-position: 50% 50%
+			background-repeat: none
+			opacity: 0
+			z-index: 0
+			-webkit-backface-visibility: hidden
+		&:nth-child(1) span
+			background-image: url(../img/3-salut.jpg)
+			animation: imageAnimation 36s linear infinite 0s
+		&:nth-child(2) span
+			background-image: url(../img/1-salut.jpg)
+			animation: imageAnimation-2 36s linear infinite 0s
+			animation-delay: 6s
+		&:nth-child(3) span
+			background-image: url(../img/4-salut.jpg)
+			animation: imageAnimation 36s linear infinite 0s
+			animation-delay: 12s
+		&:nth-child(4) span
+			background-image: url(../img/3-salut.jpg)
+			animation: imageAnimation-2 36s linear infinite 0s
+			animation-delay: 18s
+		&:nth-child(5) span
+			background-image: url(../img/1-salut.jpg)
+			animation: imageAnimation 36s linear infinite 0s
+			animation-delay: 24s
+		&:nth-child(6) span
+			background-image: url(../img/4-salut.jpg)
+			animation: imageAnimation-2 36s linear infinite 0s
+			animation-delay: 30s
+
+@keyframes imageAnimation
+	0%
+		opacity: 0
+		animation-timing-function: ease-in
+		transform: scale(1)
+		
+	8%
+		opacity: 1
+		
+		animation-timing-function: ease-out
+
+	17%
+		opacity: 1
+		 
+
+	25%
+		opacity: 0
+		transform: scale(1.1)
+
+	100%
+		opacity: 0
+
+@keyframes imageAnimation-2
+	0%
+		opacity: 0
+		animation-timing-function: ease-in
+		transform: scale(1)
+
+	8%
+		opacity: 1
+		animation-timing-function: ease-out
+
+	17%
+		opacity: 1
+
+	25%
+		opacity: 0
+		transform: scale(1.1) 
+
+	100%
+		opacity: 0
+
+.no-cssanimations .cb-slideshow li span
+	opacity: 1
+.array
+	color: #fff
+	font-size: 25px
+	bottom: 0
+	left: 50%
+	margin-left: -30px
+	width: 60px
+	height: 60px
+	background-color: $red
+	border-radius: 50%
+	text-align: center
+	padding-top: 13px
+	z-index: 300
+.products
+	font-family: $medium-font
+	letter-spacing: .2px
+	font-size: 14px 
+	text-align: center
+	li
+		position: relative
+		height: 53px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding-right: 90px
+		margin-right: 50px
+		&:first-child
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				right: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -168px 100%
+				display: block
+				float: left
+		&:nth-child(2)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				right: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -112px 100%
+				display: block
+				float: left
+		&:nth-child(3)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				right: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -112px 100%
+				display: block
+				float: left
+		&:nth-child(4)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				right: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -112px 100%
+				display: block
+				float: left
+.products-2
+	font-family: $medium-font
+	letter-spacing: .2px
+	font-size: 14px 
+	li
+		position: relative
+		height: 53px
+		display: flex
+		flex-direction: column
+		justify-content: center
+		padding-left: 90px
+		margin-left: 50px
+		&:first-child
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0px
+				left: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -55px 100%
+				display: block
+				float: left
+		&:nth-child(2)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				left: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -55px 100%
+				display: block
+				float: left
+		&:nth-child(3)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				left: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -224px 100%
+				display: block
+				float: left
+		&:nth-child(4)
+			span
+				width: 56px
+				height: 53px
+				position: absolute
+				top: 0
+				left: 5px
+				background-image: url(../img/categories.png)
+				background-repeat: no-repeat
+				background-position: -224px 100%
+				display: block
+				float: left
+.answer
+	position: relative
+	&:after
+		position: absolute
+		content: ""
+		height: 50px
+		width: 100%
+		background-image: url(../img/s1_triangle.png)
+		background-repeat: no-repeat
+		background-position: bottom center
+	h5
+		line-height: 40px
+	img
+		height: 200px
+		animation-delay: .5s
+	p
+		font-size: 18px
+		span
+			+ts(1px,0px,0,#222)
+	button
+		font-family: $medium-font
+	a.link
+		cursor: pointer
+		&:hover
+			color: $orange
+
+.we
+	p
+		font-size: 14px
+		font-family: $medium-font
+		letter-spacing: .2px
+	svg
+		width: 60px
+		height: 60px
+		font-size: 30px
+.we-2
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		height: 6px
+		width: 100%
+		background-color: #db3141
+		top: -6px
+		background-image: url(../img/bah_2.png)
+		background-repeat: repeat-x
+	img
+		width: 210px
+	p
+		margin-top: 30px
+		font-family: $medium-font
+		font-size: 14px
+footer
+	position: relative
+	&:before
+		position: absolute
+		content: ""
+		height: 6px
+		width: 100%
+		background-color: #db3141
+		top: -6px
+		background-image: url(../img/bah_3.png)
+		background-repeat: repeat-x
+
+.modal-body, .footer-box
+	font-family: $medium-font
+	letter-spacing: .2px
+	font-size: 14px
+	p
+		float: left
+		margin-right: 20px
+		color: $red
+
+
+
+
+
+
+
+@import "media" // Always at the end
