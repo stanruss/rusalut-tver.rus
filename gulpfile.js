@@ -37,7 +37,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/bootstrap//dist/js/bootstrap.js',
+		'app/libs/bootstrap/dist/js/bootstrap.js',
 		'app/js/popper/popper.js',
 		'app/js/smooth-scroll.min.js',
 		// 'app/js/modernizr.js',
