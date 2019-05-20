@@ -387,8 +387,35 @@ html, body
 	img
 		width: 25px
 		height: auto
-	
+.akcia
+	.container
+		position: relative
+		.layout
+			position: absolute
+			background-color: $red
+			opacity: .6
+			+border-radius(12px, right-bottom)
+			+border-radius(12px, left-bottom)
+			right: 0
+			left: 0
+			bottom: 0
+			top: 0
+		.row
+			background-image: url(../img/stars.png)
+			background-size: 25px
+			background-color: $red
+			text-align: center
+			+border-radius(12px, right-bottom)
+			+border-radius(12px, left-bottom)
+			+ts(1px,1px,1px,#000)
+				
+			
+
+
 .we
+	i
+		font-size: 25px
+		margin-bottom: 25px
 	p
 		font-size: 14px
 		font-family: $medium-font
